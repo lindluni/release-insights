@@ -39,6 +39,9 @@ async function run(owner, repo, base, head, jiraID) {
             }
         }
     }
+    console.log(`\nDone processing data. The following files have been created:\n - audit-human.csv\n - audit-machine.csv`)
+    console.log(`audit-human.csv is a CSV that can be read by users, usually in its raw format in a text-editor or on the CLI.`)
+    console.log(`audit-machine.csv is parsable by Excel and Google Docs. If you intend to open the CSV in one of these programs, please use this file.`)
 }
 
 async function compareTags(owner, repo, base, head) {

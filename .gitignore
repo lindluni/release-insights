@@ -1,5 +1,10 @@
-node_modules
+node_modules/
+dist/
+
+gh-insights-*
+
 *.json
 !package.json
 !package-lock.json
+
 *.csv
