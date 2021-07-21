@@ -16,13 +16,12 @@ jobs:
         with:
           node-version: 12.x
       - name: Install Dependencies
-        run: npm install -g pkg
+        run: npm install -g pkg && npm install
       - name: Create binaries
         run: pkg -o gh-insights -t node12-linux-x64,node12-macos-x64,node12-win-x64 index.js
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          fail_on_unmatched_files: true
           tag_name: ${{ steps.get_version.outputs.VERSION }}
           files: |
             gh-insights-linux
